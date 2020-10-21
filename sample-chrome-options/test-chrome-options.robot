@@ -28,9 +28,6 @@ Create WebDriver With Chrome Options
     Call Method    ${chrome_options}    add_argument    --window-size\=800,600
     Call Method    ${chrome_options}    add_argument    --headless
     Call Method    ${chrome_options}    add_argument    --disable-extensions
-    Call Method    ${chrome_options}    add_argument    --no-sandbox
-    Call Method    ${chrome_options}    add_argument    --aggressive-cache-discard
-    Call Method    ${chrome_options}    add_argument    --enable-agressive-domstorage-flushing
     Call Method    ${chrome_options}    add_experimental_option    name=w3c    value=${True}
     @{service_args} =    Create List    --log-path=results/chromedriver.log
     Create WebDriver    Chrome    chrome_options=${chrome_options}    service_args=@{service_args}
